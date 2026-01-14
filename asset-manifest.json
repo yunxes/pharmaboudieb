@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pharmaboudieb/static/css/main.a913185b.css",
-    "main.js": "/pharmaboudieb/static/js/main.9dbff1b0.js",
+    "main.css": "/pharmaboudieb/static/css/main.c1ce7780.css",
+    "main.js": "/pharmaboudieb/static/js/main.177622ee.js",
     "index.html": "/pharmaboudieb/index.html",
-    "main.a913185b.css.map": "/pharmaboudieb/static/css/main.a913185b.css.map",
-    "main.9dbff1b0.js.map": "/pharmaboudieb/static/js/main.9dbff1b0.js.map"
+    "main.c1ce7780.css.map": "/pharmaboudieb/static/css/main.c1ce7780.css.map",
+    "main.177622ee.js.map": "/pharmaboudieb/static/js/main.177622ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.a913185b.css",
-    "static/js/main.9dbff1b0.js"
+    "static/css/main.c1ce7780.css",
+    "static/js/main.177622ee.js"
   ]
 }
