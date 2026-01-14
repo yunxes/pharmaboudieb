@@ -1,0 +1,42 @@
+{
+  "name": "pharmacy-app",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "lucide-react": "^0.255.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not ie <= 11",
+      "not edge <= 18"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "homepage": "https://yunxes.github.io/pharmacy-app",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
