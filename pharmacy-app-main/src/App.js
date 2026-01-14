@@ -1316,8 +1316,13 @@ Essayez d'ajouter manuellement à l'écran d'accueil.`);
     };
   }, []);
 
+  // Gestion d'erreur pour éviter la page blanche
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   return (
-    <div className="app-container">
+    <div className="app-container" style={{ width: '100%', maxWidth: '100%', overflowX: 'hidden' }}>
       
       {/* 🔔 Bannière d'installation PWA (en haut) */}
       {showInstallBanner && (

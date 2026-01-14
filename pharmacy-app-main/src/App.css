@@ -8,12 +8,32 @@
   font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   color: #1f2933;
   min-height: 100vh;
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 @keyframes gradientShift {
@@ -34,11 +54,15 @@ body {
 .app-container {
   min-height: 100vh;
   padding: 24px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .app-container {
-    padding: 12px;
+    padding: 12px 8px;
   }
 }
 
@@ -56,12 +80,16 @@ body {
   border-image: linear-gradient(135deg, #667eea, #764ba2, #f093fb) 1;
   position: relative;
   overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .main-card {
-    padding: 20px;
+    padding: 20px 16px;
     border-radius: 20px;
+    margin: 0 8px;
+    max-width: calc(100% - 16px);
   }
 }
 
@@ -639,82 +667,151 @@ body {
    RESPONSIVE MOBILE
 ===================== */
 @media (max-width: 768px) {
+  * {
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
   .header-title {
     font-size: 32px !important;
+    word-break: break-word;
   }
   
   .location-text {
     font-size: 20px !important;
+    word-break: break-word;
   }
   
   .search-intro {
     font-size: 18px !important;
+    word-break: break-word;
+    padding: 10px 8px !important;
   }
   
   .btn {
-    padding: 18px !important;
+    padding: 18px 16px !important;
     font-size: 16px !important;
+    word-break: break-word;
+    white-space: normal;
+  }
+  
+  .btn > div {
+    flex: 1;
+    min-width: 0;
   }
   
   .medication-name {
     font-size: 24px !important;
+    word-break: break-word;
   }
   
   .dci-title {
     font-size: 20px !important;
+    word-break: break-word;
+    flex-wrap: wrap;
+  }
+  
+  .dci-name {
+    word-break: break-word;
   }
   
   .medications-grid {
     grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
   
   .category-list-container {
     max-height: 500px !important;
+    padding: 0 4px !important;
   }
   
   .result-title-modern {
     font-size: 22px !important;
+    word-break: break-word;
   }
   
   .info-item {
     flex-direction: column;
     gap: 8px;
+    word-break: break-word;
   }
   
   .info-label {
     min-width: auto;
+    word-break: break-word;
+  }
+  
+  .info-value {
+    word-break: break-word;
   }
   
   .categories-row {
     flex-direction: column;
   }
+  
+  .category-badge,
+  .category-tag-small {
+    word-break: break-word;
+    white-space: normal;
+    text-align: center;
+  }
+  
+  .position-text,
+  .position-text-small {
+    word-break: break-word;
+  }
+  
+  .pwa-footer-text {
+    word-break: break-word;
+  }
+  
+  .total-text {
+    word-break: break-word;
+  }
 }
 
 @media (max-width: 480px) {
   .app-container {
-    padding: 8px;
+    padding: 8px 4px;
   }
   
   .main-card {
-    padding: 16px;
+    padding: 16px 12px;
     border-radius: 16px;
+    margin: 0 4px;
+    max-width: calc(100% - 8px);
   }
   
   .header-title {
     font-size: 24px !important;
+    word-break: break-word;
   }
   
   .btn {
-    padding: 16px !important;
+    padding: 16px 12px !important;
     font-size: 14px !important;
+    word-break: break-word;
   }
   
   .medication-item-card {
-    padding: 16px !important;
+    padding: 16px 12px !important;
+    word-break: break-word;
   }
   
   .dci-group-card {
-    padding: 20px !important;
+    padding: 20px 16px !important;
+    word-break: break-word;
+  }
+  
+  .dci-group-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .dci-count-badge {
+    align-self: flex-start;
   }
 }
 
@@ -764,6 +861,9 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   backdrop-filter: blur(10px);
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .btn::before {

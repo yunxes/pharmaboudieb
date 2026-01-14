@@ -17,12 +17,24 @@ window.addEventListener('unhandledrejection', (event) => {
   event.preventDefault();
 });
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Vérifier que l'élément root existe avant de rendre
+const rootElement = document.getElementById('root');
+if (!rootElement) {
+  console.error('Élément root non trouvé!');
+  document.body.innerHTML = '<div style="padding: 20px; text-align: center; color: red;">Erreur: Élément root non trouvé</div>';
+} else {
+  try {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    );
+  } catch (error) {
+    console.error('Erreur lors du rendu:', error);
+    rootElement.innerHTML = '<div style="padding: 20px; text-align: center; color: red;">Erreur lors du chargement de l\'application</div>';
+  }
+}
 
 // Enregistrer le service worker
 serviceWorkerRegistration.register({
