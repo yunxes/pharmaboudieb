@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pharmaboudieb/static/css/main.57090ae6.css",
+    "main.js": "/pharmaboudieb/static/js/main.1d7a1e07.js",
+    "index.html": "/pharmaboudieb/index.html",
+    "main.57090ae6.css.map": "/pharmaboudieb/static/css/main.57090ae6.css.map",
+    "main.1d7a1e07.js.map": "/pharmaboudieb/static/js/main.1d7a1e07.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.57090ae6.css",
+    "static/js/main.1d7a1e07.js"
+  ]
+}
