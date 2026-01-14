@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import { 
   Search, MapPin, Pill, FileText, Download, AlertTriangle,
-  Circle, Cloud, FlaskConical, Bean, Shield, Bug, Skull,
+  FlaskConical, Shield, Bug, Skull,
   Thermometer, Headphones, Activity, Heart, Droplet,
   ActivitySquare, Eye, Bone, Brain, BrainCircuit,
-  Syringe, ShieldAlert, HeartPulse, Wind
+  Syringe, HeartPulse, Wind
 } from 'lucide-react';
 
 const PharmacyApp = () => {

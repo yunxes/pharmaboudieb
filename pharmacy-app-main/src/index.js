@@ -4,6 +4,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
+// Gestion des erreurs globales pour mobile
+window.addEventListener('error', (event) => {
+  console.error('Erreur globale:', event.error);
+  // Ne pas bloquer l'application en cas d'erreur
+  return true;
+});
+
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('Promesse rejetée:', event.reason);
+  // Ne pas bloquer l'application
+  event.preventDefault();
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

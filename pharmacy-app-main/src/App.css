@@ -36,6 +36,12 @@ body {
   padding: 24px;
 }
 
+@media (max-width: 768px) {
+  .app-container {
+    padding: 12px;
+  }
+}
+
 .main-card {
   max-width: 1000px;
   margin: auto;
@@ -50,6 +56,13 @@ body {
   border-image: linear-gradient(135deg, #667eea, #764ba2, #f093fb) 1;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .main-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
 }
 
 .main-card::before {
@@ -620,6 +633,110 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: 0.3px;
+}
+
+/* =====================
+   RESPONSIVE MOBILE
+===================== */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 32px !important;
+  }
+  
+  .location-text {
+    font-size: 20px !important;
+  }
+  
+  .search-intro {
+    font-size: 18px !important;
+  }
+  
+  .btn {
+    padding: 18px !important;
+    font-size: 16px !important;
+  }
+  
+  .medication-name {
+    font-size: 24px !important;
+  }
+  
+  .dci-title {
+    font-size: 20px !important;
+  }
+  
+  .medications-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .category-list-container {
+    max-height: 500px !important;
+  }
+  
+  .result-title-modern {
+    font-size: 22px !important;
+  }
+  
+  .info-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .info-label {
+    min-width: auto;
+  }
+  
+  .categories-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 8px;
+  }
+  
+  .main-card {
+    padding: 16px;
+    border-radius: 16px;
+  }
+  
+  .header-title {
+    font-size: 24px !important;
+  }
+  
+  .btn {
+    padding: 16px !important;
+    font-size: 14px !important;
+  }
+  
+  .medication-item-card {
+    padding: 16px !important;
+  }
+  
+  .dci-group-card {
+    padding: 20px !important;
+  }
+}
+
+/* Amélioration des performances sur mobile */
+@media (max-width: 768px) {
+  body {
+    background-size: 200% 200%;
+    animation-duration: 20s;
+  }
+  
+  .main-card::before {
+    animation-duration: 4s;
+  }
+  
+  .btn::before,
+  .btn::after {
+    display: none; /* Désactiver les animations complexes sur mobile */
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
 }
 
 /* =====================
